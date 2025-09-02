@@ -1,0 +1,1 @@
+# Jharkhand-Academic-Integrity-Platform

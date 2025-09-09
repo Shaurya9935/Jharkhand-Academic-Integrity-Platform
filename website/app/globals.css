@@ -8,6 +8,13 @@ html, body {
   overflow: hidden;
 }
 
+/* body, html {
+  font-family: 'Poppins', 'Roboto', 'Martel Sans', 'Baloo Bhaijaan 2', sans-serif;
+} */
+
+.material-symbols-outlined.large {
+  font-size: 2rem;
+}
 .nav-item {
   position: relative;
   cursor: pointer;

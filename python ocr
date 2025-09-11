@@ -1,0 +1,30 @@
+# to extract image from pdf file
+from pdf2image import convert_from_path
+import pytesseract
+
+# Set the path to tesseract.exe
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+# PDF file path
+pdf_path = r"C:\Users\sachi\Downloads\Application-SGF266F000591.pdf"
+
+# Convert PDF pages to images
+pages = convert_from_path(pdf_path)
+
+# Loop through each page and extract text
+for page in pages:
+    text = pytesseract.image_to_string(page)
+    print(text)
+
+#to extract data from image doc type
+from PIL import Image
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+# Load an image
+img = Image.open(r"D:\Screenshot 2025-09-05 154102.jpg")
+# Extract text from image
+text = pytesseract.image_to_string(img)
+
+print(text)

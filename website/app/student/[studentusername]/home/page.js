@@ -22,6 +22,7 @@ const Home = ({ params }) => {
   return (
     <div className='p-8 font-bold text-2xl'>
       <h1 className='text-3xl font-bold'>{getPageTitle(pathname)}</h1>
+      
     </div>
   )
 }

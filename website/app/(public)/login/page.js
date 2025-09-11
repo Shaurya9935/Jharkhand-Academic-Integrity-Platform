@@ -1,7 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
+import { signIn } from "next-auth/react"; // If using NextAuth
 
 export default function LoginPage() {
+  const [role, setRole] = useState("student");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Use signIn from NextAuth or your own logic
+    // Pass role as a parameter if needed
+    // Example: signIn("credentials", { email, password, role })
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f3f7fd] to-[#eaf1fb] flex flex-col items-center">
       {/* Header */}
@@ -23,7 +34,16 @@ export default function LoginPage() {
         <p className="text-gray-500 text-center mb-6">
           Enter your credentials to access your dashboard
         </p>
-        <form>
+        <form onSubmit={handleSubmit}>
+          <label className="block mb-2 font-medium">Role</label>
+          <select
+            className="w-full mb-4 p-2 border rounded"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+          >
+            <option value="student">Student</option>
+            <option value="institution">Institution</option>
+          </select>
           <label className="block mb-2 font-medium">Email Address</label>
           <div className="relative mb-4">
             <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">

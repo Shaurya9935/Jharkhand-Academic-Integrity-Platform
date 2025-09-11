@@ -8,7 +8,7 @@ const PublicNavbar = () => {
         <span className="material-symbols-outlined text-blue-600">shield</span>
         <span className="font-bold text-lg">Jharkhand Academic Integrity Platform</span>
       </div>
-      <Link href="/login">
+      <Link href="/(public)/login">
         <button className="bg-blue-600 text-white px-6 py-2 rounded font-medium hover:bg-blue-700 transition">Login</button>
       </Link>
     </nav>
